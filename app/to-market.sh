@@ -4,7 +4,7 @@ echo " ******************************** "
 
 source compiler-cfg.sh
 # REFERENCIA
-# export APPNAME=CuantoTengo
+# export APPNAME=LaGenNoOficial
 # export MKEY="xxxxxxxxxx"
 # export MYSDKPATH=/home/user/android-sdk-linux
 echo "Importado"
@@ -52,6 +52,15 @@ echo " ******************************** "
 echo "Alineado y balanceado"
 echo " ******************************** "
 
-${MYSDKPATH}/build-tools/23.0.3/zipalign -v 4 \
+${MYSDKPATH}/build-tools/24.0.3/zipalign -v -p 4 \
   platforms/android/build/outputs/apk/android-release-unsigned.apk \
-  platforms/android/build/outputs/apk/${APPNAME}-release.apk
+  platforms/android/build/outputs/apk/android-release-unsigned-aligned.apk
+
+echo " ******************************** "
+echo "Firmando ando"
+echo " ******************************** "
+
+
+${MYSDKPATH}/build-tools/24.0.3/apksigner sign --ks ${APPNAME}.keystore \
+    --out platforms/android/build/outputs/apk/${APPNAME}-singned.apk \
+    platforms/android/build/outputs/apk/android-release-unsigned-aligned.apk
