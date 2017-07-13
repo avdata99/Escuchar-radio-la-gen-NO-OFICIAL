@@ -1,3 +1,5 @@
 *.keystore
 compiler-cfg.sh
+*.apk
+*.zip
 
