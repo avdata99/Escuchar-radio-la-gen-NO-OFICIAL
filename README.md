@@ -10,6 +10,7 @@ Extraido de la web http://genfm.com.ar/reproductor/.
 
 ## APP
 
+La app compilada quedó [disponible en Google Play](https://play.google.com/store/apps/details?id=ar.com.data99.lagennooficial)
+
 ![logo](app/www/res/app-gen.png)
 
-La app compilada quedó [disponible en Google Play](https://play.google.com/store/apps/details?id=ar.com.data99.lagennooficial)
