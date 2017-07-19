@@ -2,7 +2,10 @@
 var app = {
     // Application Constructor
 
-    streamingSrc: "http://167.114.210.20:8027/stream", 
+    // se cayo en jul 2017
+    // streamingSrc: "http://167.114.210.20:8027/stream", 
+    // nuevo 18/7/2017
+    streamingSrc: "http://67.205.67.164:9982/",
     logoSrc: "res/logo-gen.png",
     
     initialize: function() {
